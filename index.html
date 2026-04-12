@@ -5,125 +5,272 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Hisan Usman</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to Font Awesome for icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <!-- <div class="header-content">
-            <h1 class="header-title">Muhammad Hisan Usman</h1>
-        </div> -->
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <!-- <li><a href="#publications">Publications</a></li> -->
-                <li><a href="#education">Education</a></li>
-                <li><a href="#work">Work</a></li>                
-                <li><a href="#teaching">Teaching</a></li>
-                <!-- <li><a href="#awards">Awards</a></li> -->
-                <li><a href="mailto:hisan.usman20@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
+    <header id="header">
+        <div class="nav-inner">
+            <span class="nav-logo">Muhammad Hisan Usman</span>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="mailto:hisan.usman20@gmail.com" class="nav-cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
+    <main class="container">
+
+        <!-- ABOUT -->
         <section id="about">
-            <div class="about-content">
-                <div class="image-icons">
-                    <img src="Picture.jpeg" alt="Hisan">
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/hisan-usman/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/hisanusman" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i></a>
+            <div class="about-grid">
+                <div class="about-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-img-wrap">
+                            <img src="Picture.jpeg" alt="Muhammad Hisan Usman">
+                        </div>
+                        <h1 class="profile-name">Muhammad Hisan Usman</h1>
+                        <p class="profile-role">AI Engineer</p>
+                        <p class="profile-email">
+                            <i class="fas fa-envelope"></i>
+                            hisan [dot] usman20 [at] gmail [dot] com
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/hisan-usman/" target="_blank" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/hisanusman" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="CV.pdf" target="_blank" aria-label="CV / Resume">
+                                <i class="fas fa-file-alt"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <h1>Muhammad Hisan Usman</h1>
-                    <p>Email: hisan [dot] usman20 [at] gmail [dot] com</p>
+
+                <div class="about-body">
+                    <div class="section-label">About</div>
                     <p>
-                        I am an AI Engineer with 1.5 years of experience building production AI systems that real businesses depend on. I hold a Bachelor of Science in Artificial Intelligence from the <a href="http://isb.nu.edu.pk/">National University of Computer & Emerging Sciences (NUCES)</a> and have been shipping intelligent systems — from multi-agent platforms to enterprise voice agents — since the day I graduated. Currently at <a href="https://www.linkedin.com/company/ember-ai-solutions/">Ember AI</a>, I architect the company's core product: a multi-agent system that uses <b>retrieval-augmented generation, LLM orchestration, and agentic workflows</b> to transform unstructured client documents into production-ready specifications. Previously, at <a href="https://carecloud.com/">CareCloud Inc.</a>, I led a team of 10+ engineers building <b>StratusAI</b> — an enterprise voice agent that handles live phone calls for healthcare providers, processes real-time dialogue through LLMs, and integrates directly with electronic health record systems, all under <b>HIPAA compliance</b>. I also built an ML pipeline that parses unstructured healthcare claims into 40+ structured fields at <b>95%+ accuracy</b>. Earlier in my career, I worked on computer vision for military drone imagery at <a href="https://rapidev.com/">Rapidev</a>, automated data science pipelines at <a href="https://www.systemsltd.com/">Systems Limited</a>, and large-scale financial analytics at <a href="https://www.teradata.com/">Teradata</a>.
+                        I am an AI Engineer with 1.5 years of experience building production AI systems that real businesses depend on. I hold a Bachelor of Science in Artificial Intelligence from the <a href="http://isb.nu.edu.pk/">National University of Computer &amp; Emerging Sciences (NUCES)</a> and have been shipping intelligent systems — from multi-agent platforms to enterprise voice agents — since the day I graduated.
                     </p>
                     <p>
-                        My final year project, <b>WatchDog AI</b>, developed under the supervision of <a href="https://www.linkedin.com/in/usman-haider-usa95/">Dr. Usman Haider</a>, is a real-time surveillance system combining <b>Vision Transformers</b> for violent activity detection, custom <b>YOLOv8</b> models for weapon detection, <b>CLIP</b> for scene understanding, and <b>LangChain</b> for automated report generation — integrating multi-modal computer vision with large language models to automate threat detection and emergency response workflows. Beyond this, my project portfolio includes human action recognition using Vision Transformers, sign language-to-speech systems using <b>CNNs</b> and <b>GPT</b>, and deep learning for custom emoji generation using <b>GANs</b> — reflecting hands-on experience across the full spectrum of modern AI architectures.
+                        Currently at <a href="https://www.linkedin.com/company/ember-ai-solutions/">Ember AI</a>, I architect the company's core product: a multi-agent system that uses <strong>retrieval-augmented generation, LLM orchestration, and agentic workflows</strong> to transform unstructured client documents into production-ready specifications. Previously, at <a href="https://carecloud.com/">CareCloud Inc.</a>, I led a team of 10+ engineers building <strong>StratusAI</strong> — an enterprise voice agent that handles live phone calls for healthcare providers, processes real-time dialogue through LLMs, and integrates directly with electronic health record systems, all under <strong>HIPAA compliance</strong>. I also built an ML pipeline that parses unstructured healthcare claims into 40+ structured fields at <strong>95%+ accuracy</strong>. Earlier in my career, I worked on computer vision for military drone imagery at <a href="https://rapidev.com/">Rapidev</a>, automated data science pipelines at <a href="https://www.systemsltd.com/">Systems Limited</a>, and large-scale financial analytics at <a href="https://www.teradata.com/">Teradata</a>.
                     </p>
-                    <p>
-                        My research interests include <b>Agentic AI, Retrieval-Augmented Generation, Natural Language Processing, Computer Vision, and Intelligent Systems Engineering.</b> I am actively seeking graduate study and research opportunities to build formal depth behind the production systems I ship, and to contribute original research to the field.
-                    </p>
-                    <p>
-                        Should you wish to discuss potential collaborations or require any additional information, please feel free to contact me via email.
-                    </p>
+                </div>
+            </div>
+            <div class="about-full">
+                <p>
+                    My final year project, <strong>WatchDog AI</strong>, developed under the supervision of <a href="https://www.linkedin.com/in/usman-haider-usa95/">Dr. Usman Haider</a>, is a real-time surveillance system combining <strong>Vision Transformers</strong> for violent activity detection, custom <strong>YOLOv8</strong> models for weapon detection, <strong>CLIP</strong> for scene understanding, and <strong>LangChain</strong> for automated report generation — integrating multi-modal computer vision with large language models to automate threat detection and emergency response workflows. Beyond this, my project portfolio includes human action recognition using Vision Transformers, sign language-to-speech systems using <strong>CNNs</strong> and <strong>GPT</strong>, and deep learning for custom emoji generation using <strong>GANs</strong>.
+                </p>
+                <p>
+                    My research interests include <strong>Agentic AI, Retrieval-Augmented Generation, Natural Language Processing, Computer Vision, and Intelligent Systems Engineering.</strong> I am actively seeking graduate study and research opportunities to build formal depth behind the production systems I ship, and to contribute original research to the field.
+                </p>
+            </div>
+        </section>
+
+        <!-- RESEARCH -->
+        <section id="research">
+            <div class="section-label">Research Interests</div>
+            <h2 class="section-title">What I think about</h2>
+            <div class="tags-grid">
+                <span class="tag"><i class="fas fa-robot"></i> Agentic AI</span>
+                <span class="tag"><i class="fas fa-magic"></i> Generative AI</span>
+                <span class="tag"><i class="fas fa-language"></i> Natural Language Processing</span>
+                <span class="tag"><i class="fas fa-eye"></i> Computer Vision</span>
+                <span class="tag"><i class="fas fa-brain"></i> Machine Learning</span>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <div class="section-label">Education</div>
+            <h2 class="section-title">Academic Background</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">BSc. Artificial Intelligence</span>
+                            <span class="timeline-date">Sept 2021 – June 2025</span>
+                        </div>
+                        <a href="http://isb.nu.edu.pk/" class="timeline-org">NUCES (FAST)</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">A-Levels</span>
+                            <span class="timeline-date">Sept 2019 – Aug 2021</span>
+                        </div>
+                        <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-advanced/cambridge-international-as-and-a-levels/" class="timeline-org">CAIE</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">O-Levels</span>
+                            <span class="timeline-date">Sept 2017 – Aug 2019</span>
+                        </div>
+                        <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-upper-secondary/cambridge-o-level/" class="timeline-org">CAIE</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="research">
-            <h2>Research Interests</h2>
-            <ul>                
-                <li>Agentic AI</li>
-                <li>Generative AI</li>
-                <li>Natural Language Processing</li>                
-                <li>Computer Vision</li>
-                <li>Machine Learning</li>
-            </ul>
-        </section>
-
-        <!-- <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><a href="link-to-publication-1">Title of Publication 1</a><br>
-                <em>Journal/Conference Name, Year</em></li>
-            <li><a href="link-to-publication-2">Title of Publication 2</a><br>
-                <em>Journal/Conference Name, Year</em></li>
-            Add more publications as needed 
-        </ul>
-        </section> -->
-
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>O-Levels - <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-upper-secondary/cambridge-o-level/">CAIE</a>. Sept 2017 - Aug 2019</li>                
-                <li>A-Levels - <a href="https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-advanced/cambridge-international-as-and-a-levels/">CAIE</a>. Sept 2019 - Aug 2021</li>
-                <li>BSc. (Artificial Intelligence) - <a href="http://isb.nu.edu.pk/">NUCES</a>. Sept 2021 - June 2025</li>
-            </ul>
-        </section>
-
+        <!-- WORK -->
         <section id="work">
-            <h2>Work Experience</h2>
-            <ul>
-                <li>AI Engineer - <a href="https://ember.new/">Ember AI</a>. February 2026 - Present</li>
-                <li>Jr. AI Engineer - <a href="https://www.carecloud.com/">CareCloud Inc.</a>. June 2025 - February 2026</li>
-                <li>IT Intern - <a href="https://www.carecloud.com/">CareCloud Inc.</a>. March 2025 - June 2025</li>
-                <li>Machine Learning Intern - <a href="https://www.teradata.com/">Teradata</a>. June 2024 - Aug 2024</li>
-                <li>Artificial Intelligence Intern - <a href="https://www.systemsltd.com/PK">Systems Limited</a>. July 2023 - Sept 2023</li>
-                <li>Machine Learning Intern - <a href="https://www.rapidev.com/">Rapidev</a>. June 2023 - July 2023</li>
-                <li>Dashboard & Analytics Intern - <a href="https://databi.me/">Data BI</a>. Jan 2023 - Jan 2023</li>
-            </ul>
+            <div class="section-label">Work Experience</div>
+            <h2 class="section-title">Where I've worked</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot accent"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">AI Engineer</span>
+                            <span class="timeline-date">Feb 2026 – Present</span>
+                        </div>
+                        <a href="https://ember.new/" class="timeline-org">Ember AI</a>
+                        <span class="badge badge-current">Current</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Jr. AI Engineer</span>
+                            <span class="timeline-date">June 2025 – Feb 2026</span>
+                        </div>
+                        <a href="https://www.carecloud.com/" class="timeline-org">CareCloud Inc.</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">IT Intern</span>
+                            <span class="timeline-date">Mar 2025 – June 2025</span>
+                        </div>
+                        <a href="https://www.carecloud.com/" class="timeline-org">CareCloud Inc.</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Machine Learning Intern</span>
+                            <span class="timeline-date">June 2024 – Aug 2024</span>
+                        </div>
+                        <a href="https://www.teradata.com/" class="timeline-org">Teradata</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Artificial Intelligence Intern</span>
+                            <span class="timeline-date">July 2023 – Sept 2023</span>
+                        </div>
+                        <a href="https://www.systemsltd.com/PK" class="timeline-org">Systems Limited</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Machine Learning Intern</span>
+                            <span class="timeline-date">June 2023 – July 2023</span>
+                        </div>
+                        <a href="https://www.rapidev.com/" class="timeline-org">Rapidev</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Dashboard &amp; Analytics Intern</span>
+                            <span class="timeline-date">Jan 2023</span>
+                        </div>
+                        <a href="https://databi.me/" class="timeline-org">Data BI</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- TEACHING -->
         <section id="teaching">
-            <h2>Teaching Assistant</h2>
-            <ul>
-                <li>Digital Image Processing - <a href="http://isb.nu.edu.pk/">NUCES</a>. Spring 2025</li>
-                <li>Parallel & Distributed Computing - <a href="http://isb.nu.edu.pk/">NUCES</a>. Summer 2024</li>
-                <li>Data Structures - <a href="http://isb.nu.edu.pk/">NUCES</a>. Fall 2023</li>
-            </ul>
+            <div class="section-label">Teaching</div>
+            <h2 class="section-title">Teaching Assistant</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Digital Image Processing</span>
+                            <span class="timeline-date">Spring 2025</span>
+                        </div>
+                        <a href="http://isb.nu.edu.pk/" class="timeline-org">NUCES</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Parallel &amp; Distributed Computing</span>
+                            <span class="timeline-date">Summer 2024</span>
+                        </div>
+                        <a href="http://isb.nu.edu.pk/" class="timeline-org">NUCES</a>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-degree">Data Structures</span>
+                            <span class="timeline-date">Fall 2023</span>
+                        </div>
+                        <a href="http://isb.nu.edu.pk/" class="timeline-org">NUCES</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- <section id="awards">
-            <h2>Awards & Honours</h2>
-            <ul>
-                <li>Deans List of Honours - <a href="http://isb.nu.edu.pk/">NUCES</a>. Summer 2024</li>
-                <li>Academic Scholarship - <a href="http://isb.nu.edu.pk/">NUCES</a>. Fall 2023</li>
-                <li>Certificate of Merit - <a href="Certificate of Merit.jpg">NUCES</a>. Fall 2023</li>
-            </ul>
-        </section> -->
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 Muhammad Hisan Usman. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Sticky nav shrink on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(a => a.classList.remove('active'));
+                    const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(s => observer.observe(s));
+    </script>
 </body>
 </html>
-
-
