@@ -39,7 +39,7 @@
                             <img src="Picture.jpeg" alt="Muhammad Hisan Usman">
                         </div>
                         <h1 class="profile-name">Muhammad Hisan Usman</h1>
-                        <p class="profile-role">AI Engineer</p>
+                        <p class="profile-role">AI Engineer / Research Assistant</p>
                         <p class="profile-email">
                             <i class="fas fa-envelope"></i>
                             hisan [dot] usman20 [at] gmail [dot] com
@@ -64,13 +64,13 @@
                         I am an AI Engineer and delivery lead who owns client-facing AI engagements end to end, from discovery and solution design through team delivery and executive demo. My work spans multi-agent systems, RAG, LLM applications, cloud-native ML infrastructure, and security compliance.
                     </p>
                     <p>
-                        I am currently a <strong>Graduate Research Assistant at the <a href="https://www.uh.edu/">University of Houston</a></strong>, working on agentic workflows while pursuing an MS in Engineering Data Science and AI. Previously, at <a href="https://ember.new/">Ember AI</a> via Remotebase, I led 11 client-facing AI engagements and helped drive six-figure enterprise and healthcare contracts. At <a href="https://carecloud.com/">CareCloud Inc.</a>, I led a team of 10+ engineers building HIPAA-compliant voice agents and delivered an EDI claims pipeline with 95%+ accuracy.
+                        I am currently a <strong>Research Assistant at the <a href="https://www.uh.edu/">University of Houston</a></strong>, working on agentic workflows while pursuing an MS in Engineering Data Science and AI. Previously, at <a href="https://ember.new/">Ember AI</a> via Remotebase, I led 11 client-facing AI engagements and helped drive six-figure enterprise and healthcare contracts. At <a href="https://carecloud.com/">CareCloud Inc.</a>, I led a team of 10+ engineers building HIPAA-compliant voice agents and delivered an EDI claims pipeline with 95%+ accuracy.
                     </p>
                 </div>
             </div>
             <div class="about-full">
                 <p>
-                    My final year project, <strong>CCTV Surveillance System</strong>, combined <strong>Vision Transformers</strong> for violent activity detection, custom <strong>YOLOv8</strong> object detection, <strong>CLIP</strong> scene understanding, and <strong>LangChain</strong> report generation. Other work includes multi-agent medical fact-checking, constitutional knowledge graphs, travel planning with RAG, and human action recognition.
+                    During my BS in Artificial Intelligence, I built the <strong>CCTV Surveillance System</strong> as my final year project, combining <strong>Vision Transformers</strong> for violent activity detection, custom <strong>YOLOv8</strong> object detection, <strong>CLIP</strong> scene understanding, and <strong>LangChain</strong> report generation. My current graduate work focuses on agentic workflows, alongside projects in multi-agent medical fact-checking, constitutional knowledge graphs, travel planning with RAG, and human action recognition.
                 </p>
                 <p>
                     My research interests include <strong>Agentic AI, Multi-Agent Systems, Retrieval-Augmented Generation, Natural Language Processing, Computer Vision, and Machine Learning.</strong>
@@ -194,7 +194,7 @@
                     <div class="timeline-dot accent"></div>
                     <div class="timeline-card">
                         <div class="timeline-header">
-                            <span class="timeline-degree">Graduate Research Assistant</span>
+                            <span class="timeline-degree">Research Assistant</span>
                             <span class="timeline-date">Sep 2026 – Present</span>
                         </div>
                         <a href="https://www.uh.edu/" class="timeline-org">University of Houston</a>
@@ -280,16 +280,22 @@
         // Active nav link on scroll
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(a => a.classList.remove('active'));
-                    const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
-                    if (active) active.classList.add('active');
-                }
+        const updateActiveNav = () => {
+            const readingLine = window.scrollY + window.innerHeight * 0.3;
+            let currentSection = sections[0];
+
+            sections.forEach(section => {
+                if (section.offsetTop <= readingLine) currentSection = section;
             });
-        }, { threshold: 0.4 });
-        sections.forEach(s => observer.observe(s));
+
+            navLinks.forEach(a => a.classList.remove('active'));
+            const active = document.querySelector(`nav a[href="#${currentSection.id}"]`);
+            if (active) active.classList.add('active');
+        };
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('resize', updateActiveNav);
+        updateActiveNav();
     </script>
 </body>
 </html>
