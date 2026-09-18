@@ -385,6 +385,29 @@ nav a:hover, nav a.active {
     font-size: 0.78rem;
 }
 
+.certification-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.certification-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    color: var(--text);
+    font-size: 0.88rem;
+}
+
+.certification-item span:last-child {
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
 /* ===== TIMELINE ===== */
 .timeline {
     position: relative;
@@ -568,5 +591,14 @@ footer {
     .skill-groups,
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .certification-item {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .certification-item span:last-child {
+        white-space: normal;
     }
 }
